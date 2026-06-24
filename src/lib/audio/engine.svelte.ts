@@ -16,6 +16,7 @@ import {
   exportProject as _exportProject,
   importProject as _importProject,
 } from "./project-io.js"
+import { renderMixdown } from "./mixdown.js"
 
 export class AudioEngine {
   // ─── Reactive state (read by UI) ────────────────────────────────────
@@ -677,6 +678,11 @@ export class AudioEngine {
   /** Serializes all tracks and settings into a compressed .4trk binary blob. */
   exportProject(): Promise<Blob> {
     return _exportProject(this.tracks, this.config, this.masterVolume, this.meta)
+  }
+
+  /** Renders the stereo mixdown of the active tracks as a WAV blob. */
+  async exportMixdown(): Promise<Blob> {
+    return renderMixdown(this.tracks, this.masterVolume, this.config.sampleRate)
   }
 
   /** Loads a .4trk file, restoring all track buffers, mixer settings, and master volume. */
