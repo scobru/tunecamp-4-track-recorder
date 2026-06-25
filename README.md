@@ -1,17 +1,17 @@
-# 4track
+# TuneCamp 4-Track Recorder
 
-A browser-based 4-track audio recorder built with the Web Audio API and SvelteKit. Designed for low-latency recording with overdub support, latency compensation, and sample-accurate multi-track playback — all running entirely client-side with no server required.
+A browser-based 4-track cassette recorder built with the Web Audio API and Svelte 5. Designed for low-latency recording with overdub support, latency compensation, and sample-accurate multi-track playback — all running entirely client-side with no server required. Part of the TuneCamp ecosystem.
 
 ![4-Track Recorder](img/4track.png)
 
 ## Give it a try
 
-You can try out the 4 track recorder on [4track.cc](https://www.4track.cc)
+You can try out the 4-track recorder on [4track.cc](https://www.4track.cc)
 
 ## Installation
 
 ```bash
-npm install 4-track-recorder
+npm install 4track
 ```
 
 ## Basic Usage
